@@ -7,16 +7,19 @@ on:
       - "release/*"
     paths:
       - "src/**"
+
   pull_request:
     branches:
       - master
       - "release/*"
+
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: run tests
-        run: npm run test
+      - name: Run tests
+        run: npm test
