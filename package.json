@@ -4,7 +4,7 @@
   "description": "A simple Node.js application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Running tests...\""
+    "test": " bash src/test.sh"
   },
   "author": "",
   "license": "ISC"
