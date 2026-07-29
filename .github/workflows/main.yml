@@ -2,6 +2,8 @@ name: Welcome Workflow
 
 on:
   push:
+    branches:
+      - master
 
 jobs:
   welcome:
