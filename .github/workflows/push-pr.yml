@@ -1,13 +1,6 @@
 name: Push-Pr Workflow
 
 on:
-  push:
-    branches:
-      - master
-      - "release/*"
-    paths:
-      - "src/**"
-
   pull_request:
     branches:
       - master
