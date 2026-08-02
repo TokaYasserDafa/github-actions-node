@@ -1,5 +1,5 @@
 on:
-  worflow_dispatch:
+  workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
