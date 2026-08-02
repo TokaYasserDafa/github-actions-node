@@ -1,0 +1,9 @@
+on:
+  respository_dispatch:
+    types: [incident_report]
+jobs:
+  handle-incident:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Manual Job Step
+        run: echo "This job was triggered manually via repository_dispatch event."
