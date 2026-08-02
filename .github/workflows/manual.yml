@@ -1,0 +1,8 @@
+on:
+  worflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Deploying application..."
