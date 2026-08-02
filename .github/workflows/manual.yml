@@ -1,6 +1,6 @@
 on:
   workflow_dispatch:
-    inpuuts:
+    inputs:
       environment:
         description: "Choose environment"
         required: true
