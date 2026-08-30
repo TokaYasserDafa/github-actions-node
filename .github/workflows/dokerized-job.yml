@@ -7,8 +7,8 @@ jobs:
     container:
       image: ghcr.io/my-org/my-private-image:latest
       credentials:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - run: node --version
       - run: echo "this whole job runs in the nodejs container"
