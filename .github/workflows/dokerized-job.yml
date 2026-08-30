@@ -5,10 +5,7 @@ jobs:
   dockerized-job:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/my-org/my-private-image:latest
-      credentials:
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+      image: ghcr.io/my-org/my-private-image:latest        # private repo
     steps:
       - run: node --version
       - run: echo "this whole job runs in the nodejs container"
