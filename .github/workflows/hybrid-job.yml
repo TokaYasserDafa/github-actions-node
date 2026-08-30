@@ -1,4 +1,4 @@
-on:  
+on:
   workflow_dispatch:
 
 jobs:
@@ -8,14 +8,11 @@ jobs:
       - name: run command in ubuntu VM
         run: echo "this runs in ubuntu VM"
 
-       -name: run inside an Alpine container
-        uses: docker://alpine:3.1.4
-        run: echo "this runs in Alpine container"
+      - name: run inside an Alpine container
+        uses: docker://alpine:latest
         with:
           entrypoint: /bin/sh
-          args: -c 
-                  - |
-                    echo "this runs in Alpine container"
+          args: -c "echo this runs in Alpine container"
 
       - name: run another command in ubuntu VM
-        run: echo "back to the ubuntu VM"      
+        run: echo "back to the ubuntu VM"
