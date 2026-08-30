@@ -1,0 +1,16 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  actions-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: say hellow
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          name: Toka
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+
+  
