@@ -26,7 +26,9 @@ jobs:
         run: echo "API_KEY=12345Y" >> $GITHUB_ENV
 
       - name: Use API Key
-        run: echo "Using API_KEY: ${{ env.API_KEY }}"
+        env:
+          API_KEY: ${{ env.API_KEY }}
+        run: 'echo "Using API_KEY: $API_KEY"'
 
       - name: Run tests
         run: npm test
