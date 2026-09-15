@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Set API Key
         run: echo "API_KEY=12345Y" >> $GITHUB_ENV
 
@@ -27,4 +30,3 @@ jobs:
 
       - name: Run tests
         run: npm test
-
