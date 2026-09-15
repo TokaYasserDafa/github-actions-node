@@ -1,14 +1,30 @@
+name: Commands Workflow
+
 on:
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   example:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: Set API Key
         run: echo "API_KEY=12345Y" >> $GITHUB_ENV
 
       - name: Use API Key
         run: echo "Using API_KEY: ${{ env.API_KEY }}"
+
+      - name: Run tests
+        run: npm test
 
