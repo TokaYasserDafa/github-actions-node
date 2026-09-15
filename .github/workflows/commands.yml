@@ -9,4 +9,4 @@ jobs:
         run: echo "API_KEY=12345Y" >> $GITHUB_ENV
 
       - name: use API Key
-        run: echo 'USING API_KEY: ${{ env.API_KEY }}'
+        run: echo "USING API_KEY: ${{ env.API_KEY }}"
