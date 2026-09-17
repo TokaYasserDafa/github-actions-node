@@ -10,4 +10,9 @@ jobs:
 
       - name: Use API Key
         run: echo "Using API_KEY ${{ env.API_KEY }}"
-
+      - name: Build
+        run: |
+          echo "::group::Build information"
+          echo "Installing dependencies..."
+          echo "Running build..."
+          echo "::endgroup::"
