@@ -10,9 +10,16 @@ jobs:
 
       - name: Use API Key
         run: echo "Using API_KEY ${{ env.API_KEY }}"
+
+        # GitHub will display those messages as a collapsible group.
       - name: Build
         run: |
           echo "::group::Build information"
           echo "Installing dependencies..."
           echo "Running build..."
           echo "::endgroup::"
+
+      # You can tell GitHub Actions to hide a value from logs:
+      # If that value later appears in logs, GitHub masks it:
+      - name: Hide secret
+        run: echo "::add-mask::my-secret-value"
