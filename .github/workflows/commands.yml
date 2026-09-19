@@ -22,4 +22,4 @@ jobs:
       # You can tell GitHub Actions to hide a value from logs:
       # If that value later appears in logs, GitHub masks it:
       - name: Hide secret
-        run: echo "::add-mask::my-secret-value"
+        run: echo "::add-mask::${{ env.API_KEY }}"
